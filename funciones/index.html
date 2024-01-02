@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color-base{
+            color:chartreuse
+        }
+    </style>
+</head>
+<body>
+    <diV style="text-align: center;">
+        <div id="texto">
+            <h1>
+                Hola mundo!
+            </h1>
+    </div>
+        <button id="btnColor" style="margin-top: 5px;">
+            Cambiar color
+        </button>
+    </diV>
+   
+    <script>
+        const btnColor =document.querySelector("#btnColor");
+        btnColor.addEventListener("click",CambioDeColor);
+        const texto=document.querySelector("#texto")
+
+        function CambioDeColor(){
+            texto.classList.toggle("color-base")
+        }
+
+    </script>
+    
+</body>
+</html>
