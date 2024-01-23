@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .contenedor {
+
+             display: flex;
+            justify-content: center;
+            background-color:black;
+        }
+        .tabla{
+            width: 50%;
+            text-align: center;
+            color:white;
+            border:1px solid white;
+            margin-bottom:5px;
+        }
+        </style>
 </head>
-<body>
-    <div style="margin: auto;">
-        <table style="width: 50%;text-align: center;">
+<body class="contenedor">
+
+    <div style="margin: 0 auto;">
+        <table class="tabla">
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -19,7 +35,9 @@
 
             </tbody>
         </table>
+        <button id="btnTabla">Enviar</button>
     </div>
+ 
     <script src="main.js"></script>
 </body>
 </html>

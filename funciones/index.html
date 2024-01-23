@@ -12,26 +12,22 @@
 </head>
 <body>
     <diV style="text-align: center;">
-        <div id="texto">
-            <h1>
+            <h1 id="texto">
                 Hola mundo!
             </h1>
-    </div>
         <button id="btnColor" style="margin-top: 5px;">
             Cambiar color
         </button>
     </diV>
-   
     <script>
-        const btnColor =document.querySelector("#btnColor");
+        const btnColor=document.querySelector("#btnColor");
         btnColor.addEventListener("click",CambioDeColor);
         const texto=document.querySelector("#texto")
 
         function CambioDeColor(){
+
             texto.classList.toggle("color-base")
         }
-
-    </script>
-    
+    </script> 
 </body>
 </html>

@@ -8,21 +8,28 @@ const data = [
 ]   
 
 const base = document.querySelector("#base");
+const btnTabla=document.querySelector("#btnTabla");
 
+btnTabla.addEventListener("click",LlenarTabla);
 
-data.forEach(element => {
+function LlenarTabla(){
+    base.innerHTML="";
     
-    const tr1 = document.createElement("tr");
-    const td_nombre = document.createElement("td");
-    const td_apellido= document.createElement("td");
-    const td_nick = document.createElement("td");
+    data.forEach(element => {
+       
+        const tr1 = document.createElement("tr");
+        const tdNombre = document.createElement("td");
+        const tdApellido= document.createElement("td");
+        const tdNick = document.createElement("td");
+        
+        tdNombre.textContent =element.nombre;
+        tdApellido.textContent = element.apellido;
+        tdNick.textContent = element.nick;
     
-    td_nombre.textContent =element.nombre;
-    td_apellido.textContent = element.apellido;
-    td_nick.textContent = element.nick;
+        tr1.append(tdNombre);
+        tr1.append(tdApellido);
+        tr1.append(tdNick);
+        base.append(tr1);
+    });
+}
 
-    tr1.append(td_nombre);
-    tr1.append(td_apellido);
-    tr1.append(td_nick);
-    base.append(tr1);
-});
